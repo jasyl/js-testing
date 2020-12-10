@@ -10,53 +10,54 @@ describe('isPangram()', () => {
     const text = 'the quick brown fox jumps over the lazy dog';
 
     // Act
-
+    result = isPangram(text);
     // Assert
+    expect(result).toBeTruthy();
   });
 
   test('works with "abcdefghijklmnopqrstuvwxyz"', () => {
     // Arrange
-
+    const text = "abcdefghijklmnopqrstuvwxyz";
     // Act
-
+    result = isPangram(text);
     // Assert
-
+    expect(result).toBeTruthy();
   });
 
   test("missing character 'x'", () => {
     // Arrange
-
+    const text = "abcdefghijklmnopqrstuvwyz";
     // Act
-
+    result = isPangram(text);
     // Assert
-
+    expect(result).toBeFalsy();
   });
 
   test('empty sentence', () => {
     // Arrange
-
+    const text = '';
     // Act
-
+    result = isPangram(text);
     // Assert
-
+    expect(result).toBeFalsy();
   });
 
   test('pangram with underscores instead of spaces works', () => {
     // Arrange
-
+    const text = 'the_quick_brown_fox_jumps_over_the_lazy_dog'
     // Act
-
+    result = isPangram(text);
     // Assert
-
+    expect(result).toBeTruthy();
   });
 
   test('pangram with numbers', () => {
     // Arrange
-
+    const text = "abcd5efgh2ijklmnop1qrst34uvwxy3z1";
     // Act
-
+    result = isPangram(text);
     // Assert
-
+    expect(result).toBeTruthy();
   });
 
   // Write your own test case
